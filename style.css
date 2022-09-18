@@ -8,6 +8,12 @@
 body    {
     width: 100vw;
     height: 100vh;
+
+    display: flex;
+    flex-direction:  row;
+
+    /*GLOBAL VARIABLES*/
+    --light-gray: #e5e7eb;
 }
 
 .hero-image {
@@ -57,4 +63,13 @@ img[src="./assests/odin-lined.png"] {
 .credits , .credits > a    {
     color: white;
     font-size: 1vw;
+}
+
+section#first    {
+    background-color: var(--light-gray);
+}
+
+section#first > div {
+    margin-left: 20px;
+    margin-right: 20px;
 }
