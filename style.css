@@ -20,7 +20,7 @@ body    {
     display: flex;
     flex-direction: column;
     position: relative;
-    width: 30vw;
+    min-width: 50vh;
     height: 100%;
 }
 
@@ -44,14 +44,14 @@ img[src="./assests/forest.jpg"] {
 }
 
 img[src="./assests/odin-lined.png"] {
-    width: 17%;
+    width: 10vh;
     padding: 10px 0px;
 }
 
 .branding > h1  {
     font-family: "Combo";
     color: white;
-    font-size: 4vw;
+    font-size: 7vh;
 }
 
 .credits    {
@@ -62,14 +62,67 @@ img[src="./assests/odin-lined.png"] {
 
 .credits , .credits > a    {
     color: white;
-    font-size: 1vw;
+    font-size: 1.5vh;
 }
 
 section#first    {
-    background-color: var(--light-gray);
+    background-color: #ebebeb;
+    max-width: 1000vh;
+    padding-top:20vh;
+    padding-bottom: 10vh
 }
 
 section#first > div {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 5vh;
+    margin-right: 10vh;
+    font-size: 3vh;
+}
+
+section#second  {
+    padding-top: 3vh;
+    margin-left: 5vh;
+}
+
+section#second > h3 {
+    font-size: 5vh;
+    font-weight: 600;
+}
+
+section#second > form   {
+    padding-top: 3vh;
+    width: 70vh;
+}
+
+section#second > form > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+section#second > form > div > div.field {
+    display: flex;
+    flex-direction: column;
+}
+
+section#second > form > div > div.field > label  {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.7vh;
+}
+
+
+section#second > form > div > div.field > input  {
+    border: solid 1px;
+    border-color: var(--light-gray);
+    border-radius: 0.5vh;
+    width: 30vh;
+    height: 3vh;
+    padding-left: 1vh;
+    padding-right: 0.5vh;
+    font-size: 2vh;
+}
+
+
+
+section#second > form > div.communication, section#second > form > div.security_key  {
+    margin-top: 3vh;
 }

@@ -26,11 +26,65 @@
                         This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.<br/>Sign up <em>now</em> to get started.
                     </strong>        
                 </p>
-                <p>You know you want to</p>
+                <br/>
+                <p><strong>You <em>know</em> you want to</strong></p>
             </div>
         </section>
-        <section><h1>HEllo</h1></section>
-        <section><h1>Hi</h1></section>
+        <section id="second">
+                <h3>Let's do this!</h3>
+                <form action="https://httpbin.org/post" method="post">
+                    <div class="name">
+                        <div class="field">
+                            <label for="first_name">FIRST NAME</label>
+                            <input type="text" id="first_name" name="first_name"/>
+                        </div>
+                        <div class="field">
+                            <label for="last_name">LAST NAME</label>
+                            <input type="text" id="last_name" name="last_name" >
+                        </div>
+                    </div>
+                    <div class="communication">
+                        <div class="field">
+                            <label for="email">EMAIL</label>
+                            <input type="text" id="email" name="email" pattern="\([a-z]+[0-9]+|[a-z]+|[a-z]+[\-\|\!\&]+[a-z]+)@[a-z]*.[a-z]*\g">
+                        </div>
+                        <div class="field">
+                            <label for="phone_num">PHONE NUMBER</label>
+                            <input type="text" id="phone_num" name="phone_num" >
+                        </div>
+                    </div>
+                    <div class="security_key">
+                        <div class="field">
+                            <label for="password">PASSWORD</label>
+                            <input type="password" id="password" >
+                        </div>
+                        <div class="field">
+                            <label for="confirm_password">CONFIRM PASSWORD</label>
+                            <input type="password" id="confirm_password">
+                        </div>
+                    </div>
+                    <submit type="submit"></submit>
+                </form>
+        </section>
     </main>
+    <script>
+        const phoneNumber = document.querySelector("#phone_num");
+        const password = document.querySelector("#password");
+
+        phoneNumber.addEventListener('keypress',
+        function(e) {
+
+            if((e.keyCode < 48) || (e.keyCode > 57) || (phoneNumber.value.length > 9))  {
+                e.preventDefault();
+            }
+        })
+
+        password.addEventListener('blur',
+        function(e) {
+            if(password.value.length < 8)    {
+                alert("Please input a password with at least 8 characters");
+            }
+        })
+    </script>
 </body>
 </html>
