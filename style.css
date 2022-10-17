@@ -79,14 +79,20 @@ section#first > div {
 }
 
 section#second  {
-    padding-top: 3vh;
-    margin-left: 5vh;
 }
 
 section#second > h3 {
     font-size: 5vh;
     font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 3vh;
+    margin-left: 5vh;
 }
+
+div.name,  div.communication  {
+    margin-left: 5vh;
+}
+
 
 section#second > form   {
     padding-top: 3vh;
@@ -121,8 +127,17 @@ section#second > form > div > div.field > input  {
     font-size: 2vh;
 }
 
-
-
 section#second > form > div.communication, section#second > form > div.security_key  {
     margin-top: 3vh;
+    margin-left: 5vh;
+}
+
+section#second > form > button[type="submit"]   {
+    margin-top: 3vh;
+    margin-left: 5vh;
+    background-color: #596D48;
+    color: white;
+    padding: 1.5vh 2.5vw;
+    border: none;
+    border-radius: 5px;
 }

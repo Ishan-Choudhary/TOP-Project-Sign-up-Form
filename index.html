@@ -36,40 +36,42 @@
                     <div class="name">
                         <div class="field">
                             <label for="first_name">FIRST NAME</label>
-                            <input type="text" id="first_name" name="first_name"/>
+                            <input type="text" id="first_name" name="first_name" required/>
                         </div>
                         <div class="field">
                             <label for="last_name">LAST NAME</label>
-                            <input type="text" id="last_name" name="last_name" >
+                            <input type="text" id="last_name" name="last_name" required>
                         </div>
                     </div>
                     <div class="communication">
                         <div class="field">
                             <label for="email">EMAIL</label>
-                            <input type="text" id="email" name="email" pattern="\([a-z]+[0-9]+|[a-z]+|[a-z]+[\-\|\!\&]+[a-z]+)@[a-z]*.[a-z]*\g">
+                            <input type="text" id="email" name="email" pattern="\([a-z]+[0-9]+|[a-z]+|[a-z]+[\-\|\!\&]+[a-z]+)@[a-z]*.[a-z]*\g" required>
                         </div>
                         <div class="field">
                             <label for="phone_num">PHONE NUMBER</label>
-                            <input type="text" id="phone_num" name="phone_num" >
+                            <input type="text" id="phone_num" name="phone_num" required>
                         </div>
                     </div>
                     <div class="security_key">
                         <div class="field">
                             <label for="password">PASSWORD</label>
-                            <input type="password" id="password" >
+                            <input type="password" id="password" required>
                         </div>
                         <div class="field">
                             <label for="confirm_password">CONFIRM PASSWORD</label>
-                            <input type="password" id="confirm_password">
+                            <input type="password" id="confirm_password" required>
                         </div>
                     </div>
-                    <submit type="submit"></submit>
+                    <button type="submit" class="sendResult">Create Account</button>
                 </form>
         </section>
     </main>
     <script>
         const phoneNumber = document.querySelector("#phone_num");
         const password = document.querySelector("#password");
+        const confirmPassword = document.querySelector("#confirm_password");
+        const submitBtn = document.querySelector('.sendResult');
 
         phoneNumber.addEventListener('keypress',
         function(e) {
@@ -79,12 +81,18 @@
             }
         })
 
-        password.addEventListener('blur',
-        function(e) {
-            if(password.value.length < 8)    {
-                alert("Please input a password with at least 8 characters");
+        submitBtn.addEventListener('click', function()  {
+            let passwordVal = password.value;
+            let confirmPasswordVal = confirmPassword.value;
+
+            if(passwordVal == confirmPasswordVal)   {
+                //SEND THE RESULT
+            }
+            else    {
+                //SHOW THE ERROR MESSAGE
             }
         })
+
     </script>
 </body>
 </html>
