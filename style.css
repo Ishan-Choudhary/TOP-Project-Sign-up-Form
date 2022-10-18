@@ -141,3 +141,14 @@ section#second > form > button[type="submit"]   {
     border: none;
     border-radius: 5px;
 }
+
+
+section#second > form > div.security_key > div.field> p.error  {
+    font-size: 8pt;
+    color: red;
+}
+
+
+section#second > form > div.security_key > div.field> p.lenError, section#second > form > div.security_key > div.field> p.valError{
+    display: none;
+}
